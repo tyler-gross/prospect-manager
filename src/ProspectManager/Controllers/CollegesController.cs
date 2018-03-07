@@ -6,10 +6,12 @@ using System.Web.Mvc;
 
 namespace ProspectManager.Controllers
 {
-    public class HomeController : Controller
+    public class CollegesController : Controller
     {
         public ActionResult Index()
         {
+            ViewBag.Message = "Your application description page.";
+
             return View();
         }
     }

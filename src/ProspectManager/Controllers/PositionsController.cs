@@ -6,10 +6,12 @@ using System.Web.Mvc;
 
 namespace ProspectManager.Controllers
 {
-    public class HomeController : Controller
+    public class PositionsController : Controller
     {
         public ActionResult Index()
         {
+            ViewBag.Message = "Your contact page.";
+
             return View();
         }
     }

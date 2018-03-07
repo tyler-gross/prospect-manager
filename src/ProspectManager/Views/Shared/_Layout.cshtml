@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>Prospect Manager - @ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -16,13 +16,20 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <a class="navbar-brand" href="@Url.Action("Index", "Home")" style="color: #f04e23;">Prospect Manager</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    @{ var thisController = ViewContext.RouteData.Values["controller"].ToString(); }
+                    <li class="@(thisController == "Home" ? "active" : "")">
+                        @Html.ActionLink("Prospects", "Index", "Home")
+                    </li>
+                    <li class="@(thisController == "colleges" ? "active" : "")">
+                        @Html.ActionLink("Colleges", "Index", "colleges")
+                    </li>
+                    <li class="@(thisController == "positions" ? "active" : "")">
+                        @Html.ActionLink("Positions", "Index", "positions")
+                    </li>
                 </ul>
             </div>
         </div>
