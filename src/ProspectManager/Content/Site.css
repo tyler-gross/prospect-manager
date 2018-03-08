@@ -22,3 +22,17 @@ select,
 textarea {
     max-width: 280px;
 }
+
+div.dt-buttons {
+    position: absolute;
+    top: -3em;
+    right: 0;
+}
+
+table.dataTable thead .sorting_asc {
+    background-image: url(/content/img/sort_asc.png) !important;
+}
+
+table.dataTable thead .sorting_desc {
+    background-image: url(/content/img/sort_desc.png) !important;
+}
