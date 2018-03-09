@@ -17,6 +17,7 @@
                         <th scope="col">Weight</th>
                         <th scope="col">Birth Year (Age)</th>
                         <th scope="col">Draft Year</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -29,6 +30,12 @@
                         <td>291</td>
                         <td>1994 (23-24)</td>
                         <td>2018</td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;
+                                Edit
+                            </button>
+                        </td>
                     </tr>
                     <tr>
                         <td>Connor</td>
@@ -39,6 +46,12 @@
                         <td>288</td>
                         <td>1997 (20-21)</td>
                         <td>2018</td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;
+                                Edit
+                            </button>
+                        </td>
                     </tr>
                     <tr>
                         <td>Orlando</td>
@@ -49,6 +62,12 @@
                         <td>345</td>
                         <td>1996 (21-22)</td>
                         <td>2018</td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;
+                                Edit
+                            </button>
+                        </td>
                     </tr>
                     <tr>
                         <td>Jamarco</td>
@@ -59,6 +78,12 @@
                         <td>310</td>
                         <td>1996 (21-22)</td>
                         <td>2018</td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;
+                                Edit
+                            </button>
+                        </td>
                     </tr>
                     <tr>
                         <td>Frank</td>
@@ -69,6 +94,12 @@
                         <td>317</td>
                         <td>1996 (21-22)</td>
                         <td>2018</td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;
+                                Edit
+                            </button>
+                        </td>
                     </tr>
                     <tr>
                         <td>Billy</td>
@@ -79,6 +110,12 @@
                         <td>312</td>
                         <td>1995 (22-23)</td>
                         <td>2018</td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;
+                                Edit
+                            </button>
+                        </td>
                     </tr>
                     <tr>
                         <td>Quenton</td>
@@ -89,6 +126,12 @@
                         <td>330</td>
                         <td>1996 (21-22)</td>
                         <td>2018</td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;
+                                Edit
+                            </button>
+                        </td>
                     </tr>
                     <tr>
                         <td>Isaiah</td>
@@ -99,6 +142,12 @@
                         <td>302</td>
                         <td>1995 (22-23)</td>
                         <td>2018</td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;
+                                Edit
+                            </button>
+                        </td>
                     </tr>
                     <tr>
                         <td>Will</td>
@@ -109,6 +158,12 @@
                         <td>304</td>
                         <td>1995 (22-23)</td>
                         <td>2018</td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;
+                                Edit
+                            </button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -126,12 +181,25 @@
             buttons: [
                 {
                     extend: "print"
+                ,   title: "Prospects"
+                ,   customize: function (win) {
+                        $(win.document.body).find('table')
+                            .addClass('compact')
+                            .css('font-size', 'inherit');
+                    }
+                    , text: '<span class="glyphicon glyphicon-print" aria-hidden="true"></span>&nbsp;&nbsp;Print'
+                ,   className: 'btn btn-primary'
+                }
+            ,   {
+                    extend: "print"
                     , title: "Prospects"
                     , customize: function (win) {
                         $(win.document.body).find('table')
                             .addClass('compact')
                             .css('font-size', 'inherit');
                     }
+                    , text: '<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;Add'
+                ,   className: 'btn btn-success'
                 }
             ]
         ,   dom: '<"top"iBf>'
