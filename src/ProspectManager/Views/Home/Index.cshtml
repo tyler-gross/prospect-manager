@@ -216,10 +216,8 @@
         $("#prospectsTable").DataTable({
             buttons: [
                 {
-                    customize: function (win) {
-                        $(win.document.body).find('table')
-                            .addClass('compact')
-                            .css('font-size', 'inherit');
+                    init: function (dt, node, config) {
+                        $(node).attr('onclick', 'window.location.href = "/prospect/save";')
                     }
                     , text: '<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;Add'
                     , className: 'btn btn-success'
