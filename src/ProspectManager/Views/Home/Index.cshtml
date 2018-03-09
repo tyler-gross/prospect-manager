@@ -180,6 +180,15 @@
         $("#prospectsTable").DataTable({
             buttons: [
                 {
+                    customize: function (win) {
+                        $(win.document.body).find('table')
+                            .addClass('compact')
+                            .css('font-size', 'inherit');
+                    }
+                    , text: '<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;Add'
+                    , className: 'btn btn-success'
+                }
+            ,    {
                     extend: "print"
                 ,   title: "Prospects"
                 ,   customize: function (win) {
@@ -188,19 +197,8 @@
                             .css('font-size', 'inherit');
                     }
                     , text: '<span class="glyphicon glyphicon-print" aria-hidden="true"></span>&nbsp;&nbsp;Print'
-                ,   className: 'btn btn-primary'
-                }
-            ,   {
-                    extend: "print"
-                    , title: "Prospects"
-                    , customize: function (win) {
-                        $(win.document.body).find('table')
-                            .addClass('compact')
-                            .css('font-size', 'inherit');
-                    }
-                    , text: '<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;Add'
-                ,   className: 'btn btn-success'
-                }
+                , className: 'btn btn-outline-primary'
+                }   
             ]
         ,   dom: '<"top"iBf>'
         ,   language: { search: "Filter:" }
