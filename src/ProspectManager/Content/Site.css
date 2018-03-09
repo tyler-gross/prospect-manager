@@ -23,6 +23,12 @@ textarea {
     max-width: 280px;
 }
 
+@media screen and (max-width: 768px) {
+    #css-main-container {
+        margin: 0 1em;
+    }
+}
+
 div.dt-buttons {
     position: absolute;
     top: -3em;

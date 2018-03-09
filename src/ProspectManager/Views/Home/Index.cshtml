@@ -120,6 +120,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.1/js/dataTables.responsive.min.js"></script>
     <script>
         $("#prospectsTable").DataTable({
             buttons: [
@@ -133,10 +134,11 @@
                     }
                 }
             ]
-            , dom: '<"top"iBf>'
-            , language: { search: "Filter:" }
-            , paging: false
-            , order: [[1, "asc"]]
+        ,   dom: '<"top"iBf>'
+        ,   language: { search: "Filter:" }
+        ,   paging: false
+        ,   order: [[1, "asc"]]
+        ,   responsive: true
         });
     </script>
 }
