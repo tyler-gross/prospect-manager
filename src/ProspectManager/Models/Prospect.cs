@@ -39,5 +39,15 @@ namespace ProspectManager.Models
         public int DraftYear { get; set; }
 
         public College College { get; set; }
+
+        public string DisplayAge
+        {
+            get
+            {
+                int UpperAge = DateTime.Today.Year - BirthYear;
+
+                return $"{UpperAge - 1}-{UpperAge}";
+            }
+        }
     }
 }
