@@ -46,6 +46,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -142,14 +148,25 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CollegesController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PositionsController.cs" />
-    <Compile Include="Controllers\ProspectController.cs" />
+    <Compile Include="Controllers\ProspectsController.cs" />
+    <Compile Include="Data\BaseRepository.cs" />
+    <Compile Include="Data\CollegesRepository.cs" />
+    <Compile Include="Data\Context.cs" />
+    <Compile Include="Data\DatabaseInitializer.cs" />
+    <Compile Include="Data\ProspectsRepository.cs" />
+    <Compile Include="Data\Queries\GetComicBookQuery.cs" />
+    <Compile Include="Data\Repository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\College.cs" />
+    <Compile Include="Models\Prospect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ProspectsAddViewModel.cs" />
+    <Compile Include="ViewModels\ProspectsBaseViewModel.cs" />
+    <Compile Include="ViewModels\ProspectsEditViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -188,14 +205,14 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Colleges\Index.cshtml" />
-    <Content Include="Views\Positions\Index.cshtml" />
-    <Content Include="Views\Prospect\Save.cshtml" />
+    <Content Include="Views\Prospects\Add.cshtml" />
+    <Content Include="Views\Prospects\Index.cshtml" />
+    <Content Include="Views\Prospects\_prospectForm.cshtml" />
+    <Content Include="Views\Colleges\_collegeForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

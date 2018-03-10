@@ -1,9 +1,12 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var applicationName = "Prospect Manager";
+}
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Prospect Manager - @ViewBag.Title</title>
+    <title>@applicationName - @ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     <link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/responsive/2.2.1/css/responsive.dataTables.min.css" rel="stylesheet" />
@@ -18,19 +21,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="@Url.Action("Index", "Home")" style="color: #e67e22;">Prospect Manager</a>
+                <a class="navbar-brand" href="@Url.Action("index", "prospects")" style="color: #e67e22;">Prospect Manager</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     @{ var thisController = ViewContext.RouteData.Values["controller"].ToString(); }
                     <li class="@(thisController == "Home" ? "active" : "")">
-                        @Html.ActionLink("Prospects", "Index", "Home")
+                        @Html.ActionLink("Prospects", "index", "prospects")
                     </li>
                     <li class="@(thisController == "colleges" ? "active" : "")">
-                        @Html.ActionLink("Colleges", "Index", "colleges")
-                    </li>
-                    <li class="@(thisController == "positions" ? "active" : "")">
-                        @Html.ActionLink("Positions", "Index", "positions")
+                        @Html.ActionLink("Colleges", "index", "colleges")
                     </li>
                 </ul>
             </div>
@@ -40,7 +40,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>Web Design &amp; Development by Tyler Gross - @DateTime.Now.Year</p>
+            <p>Web Dev &amp; Design by Tyler Gross - @DateTime.Now.Year</p>
         </footer>
     </div>
 

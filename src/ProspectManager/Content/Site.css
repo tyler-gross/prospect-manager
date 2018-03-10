@@ -42,3 +42,7 @@ table.dataTable thead .sorting_asc {
 table.dataTable thead .sorting_desc {
     background-image: url(/content/img/sort_desc.png) !important;
 }
+
+.validation-summary-valid {
+    display: none;
+}
