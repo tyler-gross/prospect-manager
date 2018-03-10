@@ -1,0 +1,11 @@
+﻿@* Add.cshtml *@
+
+@model ProspectManager.ViewModels.ProspectsEditViewModel
+
+@{
+    ViewBag.Title = $"Edit {Model.Prospect.FirstName} {Model.Prospect.LastName}";
+}
+
+<h1>@ViewBag.Title</h1>
+
+@Html.Partial("_prospectForm")
