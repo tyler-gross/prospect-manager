@@ -16,7 +16,7 @@ namespace ProspectManager.Models
 
         public int Id { get; set; }
 
-        [Required, StringLength(50)]
+        [Display(Name = "College Name"), Required, StringLength(50)]
         public string CollegeName { get; set; }
 
         public ICollection<Prospect> Prospects { get; set; }

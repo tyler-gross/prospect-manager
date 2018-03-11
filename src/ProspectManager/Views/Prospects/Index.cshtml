@@ -6,6 +6,9 @@
 
 <div class="row">
     <div class="col">
+
+        @Html.Partial("_Message")
+        
         <h1>@ViewBag.Title</h1>
         <div class="dataTables_wrapper" style="margin-top: 1em;">
             <table class="dataTable  table  hover  row-border  stripe" id="prospectsTable">
@@ -24,31 +27,30 @@
                 </thead>
                 <tbody>
                     @foreach (var prospect in Model)
-                    {
-                        <tr>
-                            <td>@prospect.FirstName</td>
-                            <td>@prospect.LastName</td>
-                            <td>@prospect.Position</td>
-                            <td>@prospect.College.CollegeName</td>
-                            <td>@prospect.HeightFeet-@prospect.HeightInches</td>
-                            <td>@prospect.Weight</td>
-                            <td>@prospect.BirthYear (@prospect.DisplayAge)</td>
-                            <td>@prospect.DraftYear</td>
-                            <td>
-                                <a href="@Url.Action("edit", new { id = prospect.Id })" class="btn btn-primary btn-sm">
-                                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;
-                                    Edit
-                                </a>
-                                <a class="btn btn-danger btn-sm"
-                                    data-toggle="modal" data-target="#deleteModal" data-prospectid="@prospect.Id"
-                                    data-prospectname="@prospect.FirstName @prospect.LastName"
-                                >
-                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>&nbsp;
-                                    Delete
-                                </a>
-                            </td>
-                        </tr>
-                    }
+                {
+                    <tr>
+                        <td>@prospect.FirstName</td>
+                        <td>@prospect.LastName</td>
+                        <td>@prospect.Position</td>
+                        <td>@prospect.College.CollegeName</td>
+                        <td>@prospect.HeightFeet-@prospect.HeightInches</td>
+                        <td>@prospect.Weight</td>
+                        <td>@prospect.BirthYear (@prospect.DisplayAge)</td>
+                        <td>@prospect.DraftYear</td>
+                        <td>
+                            <a href="@Url.Action("edit", new { id = prospect.Id })" class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;
+                                Edit
+                            </a>
+                            <a class="btn btn-danger btn-sm"
+                               data-toggle="modal" data-target="#deleteModal" data-prospectid="@prospect.Id"
+                               data-prospectname="@prospect.FirstName @prospect.LastName">
+                                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>&nbsp;
+                                Delete
+                            </a>
+                        </td>
+                    </tr>
+            }
                 </tbody>
             </table>
         </div>

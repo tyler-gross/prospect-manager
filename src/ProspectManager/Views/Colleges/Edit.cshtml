@@ -1,0 +1,11 @@
+﻿@* Edit.cshtml *@
+
+@model ProspectManager.Models.College
+
+@{
+    ViewBag.Title = $"Edit {Model.CollegeName}";
+}
+
+<h1>@ViewBag.Title</h1>
+
+@Html.Partial("_collegeForm")

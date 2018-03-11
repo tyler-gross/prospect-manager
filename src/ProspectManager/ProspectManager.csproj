@@ -196,6 +196,9 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Views\Prospects\Edit.cshtml" />
     <Content Include="Views\Prospects\Delete.cshtml" />
+    <Content Include="Views\Colleges\Add.cshtml" />
+    <Content Include="Views\Colleges\Edit.cshtml" />
+    <Content Include="Views\Shared\_Message.cshtml" />
     <None Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
