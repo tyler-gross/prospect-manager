@@ -4,6 +4,8 @@
 
 @using (Html.BeginForm())
 {
+    <input name="prospectNameStored" type="hidden" value="@Model.Prospect.FirstName @Model.Prospect.LastName" />
+
     @Html.ValidationSummary("The following errors were found:", new { @class = "alert alert-danger" })
 
     <div class="row">
@@ -17,9 +19,9 @@
             <div class="form-group">
                 <label class="control-label" for="Prospect_HeightFeet">Height (feet)</label>
                 <select class="form-control" id="Prospect_HeightFeet" name="Prospect.HeightFeet">
-                    <option value="5"@(Model.Prospect.HeightFeet == 5 ? " selected" : "")>5</option>
-                    <option value="6"@(Model.Prospect.HeightFeet == 6 ? " selected" : "")>6</option> <!-- TODO: handle edit selected -->
-                    <option value="7"@(Model.Prospect.HeightFeet == 7 ? " selected" : "")>7</option>
+                    <option value="5" @(Model.Prospect.HeightFeet == 5 ? " selected" : "")>5</option>
+                    <option value="6" @(Model.Prospect.HeightFeet == 6 ? " selected" : "")>6</option> <!-- TODO: handle edit selected -->
+                    <option value="7" @(Model.Prospect.HeightFeet == 7 ? " selected" : "")>7</option>
                 </select>
             </div>
         </div>
@@ -27,18 +29,18 @@
             <div class="form-group">
                 <label class="control-label" for="Prospect_HeightInches">Height (inches)</label>
                 <select class="form-control" id="Prospect_HeightInches" name="Prospect.HeightInches">
-                    <option value="0"@(Model.Prospect.HeightInches == 0 ? " selected" : "")>0</option>
-                    <option value="1"@(Model.Prospect.HeightInches == 1 ? " selected" : "")>1</option>
-                    <option value="2"@(Model.Prospect.HeightInches == 2 ? " selected" : "")>2</option>
-                    <option value="3"@(Model.Prospect.HeightInches == 3 ? " selected" : "")>3</option>
-                    <option value="4"@(Model.Prospect.HeightInches == 4 ? " selected" : "")>4</option>
-                    <option value="5"@(Model.Prospect.HeightInches == 5 ? " selected" : "")>5</option>
-                    <option value="6"@(Model.Prospect.HeightInches == 6 ? " selected" : "")>6</option>
-                    <option value="7"@(Model.Prospect.HeightInches == 7 ? " selected" : "")>7</option>
-                    <option value="8"@(Model.Prospect.HeightInches == 8 ? " selected" : "")>8</option>
-                    <option value="9"@(Model.Prospect.HeightInches == 9 ? " selected" : "")>9</option>
-                    <option value="10"@(Model.Prospect.HeightInches == 10 ? " selected" : "")>10</option>
-                    <option value="11"@(Model.Prospect.HeightInches == 11 ? " selected" : "")>11</option>
+                    <option value="0" @(Model.Prospect.HeightInches == 0 ? " selected" : "")>0</option>
+                    <option value="1" @(Model.Prospect.HeightInches == 1 ? " selected" : "")>1</option>
+                    <option value="2" @(Model.Prospect.HeightInches == 2 ? " selected" : "")>2</option>
+                    <option value="3" @(Model.Prospect.HeightInches == 3 ? " selected" : "")>3</option>
+                    <option value="4" @(Model.Prospect.HeightInches == 4 ? " selected" : "")>4</option>
+                    <option value="5" @(Model.Prospect.HeightInches == 5 ? " selected" : "")>5</option>
+                    <option value="6" @(Model.Prospect.HeightInches == 6 ? " selected" : "")>6</option>
+                    <option value="7" @(Model.Prospect.HeightInches == 7 ? " selected" : "")>7</option>
+                    <option value="8" @(Model.Prospect.HeightInches == 8 ? " selected" : "")>8</option>
+                    <option value="9" @(Model.Prospect.HeightInches == 9 ? " selected" : "")>9</option>
+                    <option value="10" @(Model.Prospect.HeightInches == 10 ? " selected" : "")>10</option>
+                    <option value="11" @(Model.Prospect.HeightInches == 11 ? " selected" : "")>11</option>
                 </select>
             </div>
         </div>
@@ -62,9 +64,9 @@
             <div class="form-group">
                 <label class="control-label" for="Prospect_Position">Position</label>
                 <select class="form-control" id="Prospect_Position" name="Prospect.Position">
-                    <option value="C"@(Model.Prospect.Position == "C" ? " selected" : "")>C</option>
-                    <option value="G"@(Model.Prospect.Position == "G" ? " selected" : "")>G</option>
-                    <option value="OT"@(Model.Prospect.Position == "OT" ? " selected" : "")>OT</option>
+                    <option value="C" @(Model.Prospect.Position == "C" ? " selected" : "")>C</option>
+                    <option value="G" @(Model.Prospect.Position == "G" ? " selected" : "")>G</option>
+                    <option value="OT" @(Model.Prospect.Position == "OT" ? " selected" : "")>OT</option>
                 </select>
             </div>
         </div>
@@ -72,14 +74,14 @@
             <div class="form-group">
                 <label class="control-label" for="Prospect_BirthYear">Birth Year</label>
                 <select class="form-control" id="Prospect_BirthYear" name="Prospect.BirthYear">
-                    <option value="1997"@(Model.Prospect.BirthYear == 1997 ? " selected" : "")>1997</option>
-                    <option value="1996"@(Model.Prospect.BirthYear == 1996 ? " selected" : "")>1996</option>
-                    <option value="1995"@(Model.Prospect.BirthYear == 1995 ? " selected" : "")>1995</option>
-                    <option value="1994"@(Model.Prospect.BirthYear == 1994 ? " selected" : "")>1994</option>
-                    <option value="1993"@(Model.Prospect.BirthYear == 1993 ? " selected" : "")>1993</option>
-                    <option value="1992"@(Model.Prospect.BirthYear == 1992 ? " selected" : "")>1992</option>
-                    <option value="1991"@(Model.Prospect.BirthYear == 1991 ? " selected" : "")>1991</option>
-                    <option value="1990"@(Model.Prospect.BirthYear == 1990 ? " selected" : "")>1990</option>
+                    <option value="1997" @(Model.Prospect.BirthYear == 1997 ? " selected" : "")>1997</option>
+                    <option value="1996" @(Model.Prospect.BirthYear == 1996 ? " selected" : "")>1996</option>
+                    <option value="1995" @(Model.Prospect.BirthYear == 1995 ? " selected" : "")>1995</option>
+                    <option value="1994" @(Model.Prospect.BirthYear == 1994 ? " selected" : "")>1994</option>
+                    <option value="1993" @(Model.Prospect.BirthYear == 1993 ? " selected" : "")>1993</option>
+                    <option value="1992" @(Model.Prospect.BirthYear == 1992 ? " selected" : "")>1992</option>
+                    <option value="1991" @(Model.Prospect.BirthYear == 1991 ? " selected" : "")>1991</option>
+                    <option value="1990" @(Model.Prospect.BirthYear == 1990 ? " selected" : "")>1990</option>
                 </select>
             </div>
         </div>
@@ -89,20 +91,20 @@
             <div class="form-group">
                 <label class="control-label" for="college">College</label>
                 @Html.DropDownListFor(
-                    m => m.Prospect.CollegeId
-                  , Model.CollegeSelectListItems
-                  , ""
-                  , new { @class = "form-control" }
-                )
+                         m => m.Prospect.CollegeId
+                       , Model.CollegeSelectListItems
+                       , ""
+                       , new { @class = "form-control" }
+                     )
             </div>
         </div>
         <div class="col col-sm-2">
             <div class="form-group">
                 <label class="control-label" for="Prospect_DraftYear">Draft Year</label>
                 <select class="form-control" id="Prospect_DraftYear" name="Prospect.DraftYear">
-                    <option value="2018"@(Model.Prospect.DraftYear == 2018 ? " selected" : "")>2018</option>
-                    <option value="2019"@(Model.Prospect.DraftYear == 2019 ? " selected" : "")>2019</option>
-                    <option value="2020"@(Model.Prospect.DraftYear == 2020 ? " selected" : "")>2020</option>
+                    <option value="2018" @(Model.Prospect.DraftYear == 2018 ? " selected" : "")>2018</option>
+                    <option value="2019" @(Model.Prospect.DraftYear == 2019 ? " selected" : "")>2019</option>
+                    <option value="2020" @(Model.Prospect.DraftYear == 2020 ? " selected" : "")>2020</option>
                 </select>
             </div>
         </div>

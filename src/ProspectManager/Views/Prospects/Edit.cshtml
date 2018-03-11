@@ -2,8 +2,11 @@
 
 @model ProspectManager.ViewModels.ProspectsEditViewModel
 
+
+
 @{
-    ViewBag.Title = $"Edit {Model.Prospect.FirstName} {Model.Prospect.LastName}";
+    ViewBag.Title = (Model.Prospect.FirstName == null || Model.Prospect.LastName == null)
+        ? "Edit Prospect" : $"Edit {Model.Prospect.FirstName} {Model.Prospect.LastName}";
 }
 
 <h1>@ViewBag.Title</h1>

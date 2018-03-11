@@ -4,6 +4,8 @@
 
 @using (Html.BeginForm())
 {
+    <input name="collegeNameStored" type="hidden" value="@Model.CollegeName" />
+
     @Html.ValidationSummary("The following errors were found:", new { @class = "alert alert-danger" })
 
     <div class="row">

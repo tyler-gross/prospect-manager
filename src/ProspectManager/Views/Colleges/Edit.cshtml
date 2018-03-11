@@ -3,7 +3,7 @@
 @model ProspectManager.Models.College
 
 @{
-    ViewBag.Title = $"Edit {Model.CollegeName}";
+    ViewBag.Title = Model.CollegeName == null ? $"Edit {Request.Form["collegeNameStored"]}" : $"Edit {Model.CollegeName}";
 }
 
 <h1>@ViewBag.Title</h1>
